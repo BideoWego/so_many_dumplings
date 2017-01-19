@@ -24,6 +24,7 @@
   var _dumplingSpawnRate = 550;
   var _dumplingExplosionSpeed = 300;
   var _frameRate = 33;
+  var _volume = 0.25;
   var _imageSources = {
     dumpling: IMAGES_PATH + 'dumpling.png',
     hurt: IMAGES_PATH + 'dumpling-hurt.png',
@@ -127,14 +128,20 @@
 
   // Create uh ohs
   _.times(NUM_SOUNDS, function() {
-    var uhOh = new Howl({ src: [AUDIO_PATH + 'uh-oh.wav'] });
+    var uhOh = new Howl({
+      src: [AUDIO_PATH + 'uh-oh.wav'],
+      volume: _volume
+    });
     _uhOhs.push(uhOh);
   });
 
 
   // Create booms
   _.times(NUM_SOUNDS, function() {
-    var boom = new Howl({ src: [AUDIO_PATH + 'boom.wav'] });
+    var boom = new Howl({
+      src: [AUDIO_PATH + 'boom.wav'],
+      volume: _volume
+    });
     _booms.push(boom);
   });
 
