@@ -12,6 +12,8 @@
 
 
   var NUM_SOUNDS = 10;
+  var IMAGES_PATH = '/assets/images/';
+  var AUDIO_PATH = '/assets/audio/';
   var _dumplings = [];
   var _uhOhs = [];
   var _booms = [];
@@ -23,9 +25,9 @@
   var _dumplingExplosionSpeed = 300;
   var _frameRate = 33;
   var _imageSources = {
-    dumpling: '/dumpling.png',
-    hurt: '/dumpling-hurt.png',
-    boom: '/boom.png'
+    dumpling: IMAGES_PATH + 'dumpling.png',
+    hurt: IMAGES_PATH + 'dumpling-hurt.png',
+    boom: IMAGES_PATH + 'boom.png'
   };
   var _$dumplings = $('#dumplings');
   var _$count = $('#count');
@@ -125,14 +127,14 @@
 
   // Create uh ohs
   _.times(NUM_SOUNDS, function() {
-    var uhOh = new Howl({ src: ['uh-oh.wav'] });
+    var uhOh = new Howl({ src: [AUDIO_PATH + 'uh-oh.wav'] });
     _uhOhs.push(uhOh);
   });
 
 
   // Create booms
   _.times(NUM_SOUNDS, function() {
-    var boom = new Howl({ src: ['boom.wav'] });
+    var boom = new Howl({ src: [AUDIO_PATH + 'boom.wav'] });
     _booms.push(boom);
   });
 
