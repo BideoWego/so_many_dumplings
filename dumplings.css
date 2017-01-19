@@ -1,0 +1,22 @@
+/** ---------------------------------- *
+ * Dumplings
+ * ----------------------------------- */
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+#count {
+  font-size: 128px;
+}
+
+#footer {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  position: fixed;
+  bottom: 0;
+}
+
